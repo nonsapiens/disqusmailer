@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.0.0" method="upgrade">
+	<name>DISQUS Mailer</name>
+	<author>Stuart Steedman</author>
+	<authorEmail>stuart@steedman.co.za</authorEmail>
+	<authorUrl>www.yonder.co.za</authorUrl>
+	<copyright>Copyright (c) 2006 - 2018 Stuart Steedman. All rights reserved.</copyright>
+	<creationDate>31 July, 2016</creationDate>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>1.0.0</version>
+	<description>Allows article authors to be notified when DISQUS comments are left against their articles</description>
+	<installfile>install.disqusmailer.php</installfile>
+	<uninstallfile>uninstall.disqusmailer.php</uninstallfile>
+	<scriptfile>script.disqusmailer.php</scriptfile>
+	<!--<updateservers>
+		<server type="extension" priority="1" name="Disqus Comments (for Joomla)">http://cdn.joomlaworks.org/updates/disqus.xml</server>
+	</updateservers>-->
+	<administration>
+
+	</administration>
+	<plugins>
+		<plugin plugin="disqusmailer" group="system" />
+	</plugins>
+
+</install>

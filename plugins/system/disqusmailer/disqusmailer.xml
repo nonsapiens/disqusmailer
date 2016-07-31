@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="system" method="upgrade">
+    <name>K2 Disqus Mailer</name>
+    <author>Stuart Steedman</author>
+    <creationDate>July 2016</creationDate>
+    <copyright>Copyright (C) 2005 - 2018 Jitterbug Development. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>stuart@steedman.co.za</authorEmail>
+    <authorUrl>http://www.yonder.co.za</authorUrl>
+    <version>1.0.0</version>
+    <description>Allows K2 articles with Disqus comments to have that article's author notified of a new comment</description>
+    <files>
+        <filename plugin="disqusmailer">disqusmailer.php</filename>
+    </files>
+    <config>
+        <fields name="params">
+
+            <fieldset name="basic">
+
+                <field id="send_to_admin"
+                       name="send_to_admin"
+                       label="Send to emails"
+                       type="textarea"
+                       rows="6"
+                       description="Provide a list of email addresses that should receive the comment notification, over and above the article author"
+                       hint="e.g. your-admin@yoursite.com"
+                />
+
+                <field id="email_subject"
+                       name="email_subject"
+                       class="input-xxlarge"
+                       label="Email subject"
+                       description="Define the email subject to be used when the mail is sent."
+                       hint="New comment on the article {article_title}" />
+
+                <field id="email_template"
+                       name="email_template"
+                       label="Email template"
+                       type="editor"
+                       filter="safehtml"
+                       description="Define your mail template. Use the variables {article_title}, {comment}, {url} and {date}"
+                />
+
+            </fieldset>
+
+
+
+
+        </fields>
+    </config>
+</extension>
